@@ -1,0 +1,9 @@
+{
+  "name": "renereimann/wallstreetonline-stockquotes",
+  "description": "",
+  "license": "GPL-3.0",
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=5.3"
+  }
+}
