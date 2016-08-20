@@ -8,12 +8,7 @@ namespace wallstreetonline\stockquotes\Service;
  *
  * @package wallstreetonline\stockquotes\\Service
  */
-/**
- * Class TransientHandler
- *
- * @package wallstreetonline\stockquotes\Service
- */
-class TransientHandler {
+class TransientHandler implements TransientInterface {
 
 	/**
 	 * The current state of a transient
