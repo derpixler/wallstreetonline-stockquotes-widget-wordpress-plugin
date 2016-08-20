@@ -16,18 +16,18 @@ namespace wallstreetonline\stockquotes\Service;
 class TransientHandler {
 
 	/**
-	 * The transient key
-	 *
-	 * @var string
-	 */
-	public $key = FALSE;
-
-	/**
 	 * The current state of a transient
 	 *
 	 * @var bool
 	 */
 	public $status = FALSE;
+
+	/**
+	 * The transient key
+	 *
+	 * @var string
+	 */
+	private $key = FALSE;
 
 	/**
 	 *  Time until expiration in seconds. 0 (no expiration).
