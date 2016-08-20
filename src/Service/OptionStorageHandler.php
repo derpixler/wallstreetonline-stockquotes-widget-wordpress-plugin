@@ -6,9 +6,9 @@ namespace wallstreetonline\stockquotes\Service;
  * Handel data
  * Save data to the option table and get data from there
  *
- * @package myHotelshop\Ibe_widget\Service
+ * @package wallstreetonline\stockquotes\Service
  */
-class Handle {
+class OptionStorageHandler {
 
 	/**
 	 * The option name where is used in wordpress to store

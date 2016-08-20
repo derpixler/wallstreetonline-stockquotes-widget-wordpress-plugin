@@ -10,9 +10,11 @@ use wallstreetonline\stockquotes\Service;
  *
  * Provides methods to query data
  *
- * @package myHotelshop\Ibe_widget\Query
+ * @package wallstreetonline\stockquotes\Query
  */
 abstract class Query{
+
+	public $transient;
 
 	abstract public function set_items();
 
@@ -21,17 +23,19 @@ abstract class Query{
 	 *
 	 * @return array
 	 */
-	public function get_items( $args ) {
+	public function get_items( $args, Service\TransientHandler $transient ) {
 
-		$handle = new Service\Handle( $args[ 'option_name'] );
+		$handle = new Service\OptionStorageHandler( $args[ 'option_name'] );
 
 		$items = $handle->get();
 
-		if( empty( $items ) ){
+		if( empty( $items ) || $transient->get() == FALSE ){
 
 			new Service\Request( $args );
 
 			$items = $handle->get();
+
+			$transient->set();
 
 		}
 

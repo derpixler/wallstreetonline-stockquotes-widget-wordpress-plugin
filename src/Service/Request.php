@@ -6,7 +6,7 @@ namespace wallstreetonline\stockquotes\Service;
  * The request class authenticate with a token and
  * call data from the myhotelshop API
  *
- * @package myHotelshop\Ibe_widget\Service
+ * @package wallstreetonline\stockquotes\Service
  */
 class Request {
 
@@ -68,7 +68,7 @@ class Request {
 
 		$reponse = $this->get_remote( $this->endpoint, $args );
 
-		$handle = new Handle( $this->option_name );
+		$handle = new OptionStorageHandler( $this->option_name );
 		$handle->update( $reponse );
 
 	}
