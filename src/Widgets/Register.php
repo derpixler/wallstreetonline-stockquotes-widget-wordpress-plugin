@@ -18,7 +18,13 @@ class Register {
 	private function register(){
 
 		foreach( $this->widgets as $widget ){
-			register_widget( __NAMESPACE__ . "\\" . $widget );
+
+			$widget_class = __NAMESPACE__ . "\\" . $widget;
+
+			if( class_exists( $widget_class ) ) {
+				register_widget( $widget_class );
+			}
+
 		}
 
 	}
