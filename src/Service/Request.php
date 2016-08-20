@@ -84,6 +84,7 @@ class Request {
 	private function get_remote( $endpoint, $args ) {
 
 		$args[ 'headers' ][ 'Content-type' ] = "application/json";
+		$args[ 'user-agent' ] = 'Wordpress Plugin - wallstreet:online';
 
 		if( $args[ 'request_type' ] == 'GET' ) {
 
@@ -102,13 +103,13 @@ class Request {
 
 		$response_body = wp_remote_retrieve_body( $response );
 
-		if ( $response[ 'response' ][ 'code' ] == 200 ) {
+		if ( ! is_wp_error( $response ) && $response[ 'response' ][ 'code' ] == 200 ) {
 
 			$response = json_decode( $response_body );
-
+			return $response;
 		}
 
-		return $response;
+		return FALSE;
 
 	}
 

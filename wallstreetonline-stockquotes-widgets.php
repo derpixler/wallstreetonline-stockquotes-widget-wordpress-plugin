@@ -10,7 +10,6 @@
  * Text Domain: mhsibew
  * Domain Path: /languages
  */
-
 namespace wallstreetonline\stockquotes;
 
 use Requisite\Requisite;
@@ -39,9 +38,24 @@ function init() {
 		)
 	);
 
-	$Quotes_Realtime = new Query\Quotes();
+	add_action( 'widgets_init', function(){
 
-	print_r( $Quotes_Realtime );
-	die();
+			new Widgets\Register(
+				array(
+					'SearchBox',
+					'QuoteBox',
+					#'Chartbox',
+					#'Quotebox_Citi',
+				)
+			);
+
+		}
+	);
+
+
+	#$Quotes = new \wallstreetonline\stockquotes\Query\Quotes();
+
+	#print_r( $Quotes->get_items() );
+
 
 }

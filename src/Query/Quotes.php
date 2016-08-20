@@ -11,6 +11,10 @@ use wallstreetonline\stockquotes\Service;
  */
 class Quotes extends Query{
 
+	public $items;
+
+	public  $transient;
+	private $formatter;
 	private $arguments;
 
 	public function __construct(){
@@ -21,17 +25,20 @@ class Quotes extends Query{
 			];
 
 		$this->transient = new Service\TransientHandler( $this->arguments[ 'option_name'] );
-
-		$this->set_items();
+		$this->formatter = new Service\Formatter\FormateResponse();
 
 	}
 
 	/**
 	 * Set the IBEs
 	 */
-	public function set_items() {
+	public function get_items() {
 
-		$this->items = $this->get_items( $this->arguments, $this->transient );
+		$this->items = $this->formatter->format(
+			$this->set_items( $this->arguments, $this->transient )
+		);
+
+
 
 	}
 

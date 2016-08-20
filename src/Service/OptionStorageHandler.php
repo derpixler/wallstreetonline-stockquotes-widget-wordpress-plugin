@@ -34,7 +34,11 @@ class OptionStorageHandler {
 	 */
 	public function update( $data ) {
 
-		return update_option( $this->option_name, $data );
+		if( ! is_wp_error( $data ) ){
+
+			return update_option( $this->option_name, $data );
+
+		}
 
 	}
 
@@ -45,7 +49,21 @@ class OptionStorageHandler {
 	 */
 	public function get(){
 
-		return get_option( $this->option_name );
+		$data = get_option( $this->option_name );
+
+		if( ! is_wp_error( $data ) && ! empty( $data ) ) {
+
+			return get_option( $this->option_name );
+
+		}else{
+
+			$this->delete();
+		}
+
+		$data = new \stdClass();
+		$data->error = 'no data';
+
+		return $data;
 
 	}
 

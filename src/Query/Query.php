@@ -16,20 +16,20 @@ abstract class Query{
 
 	public $transient;
 
-	abstract public function set_items();
+	abstract public function get_items();
 
 	/**
 	 * a abstract items getter
 	 *
 	 * @return array
 	 */
-	public function get_items( $args, Service\TransientHandler $transient ) {
+	public function set_items( $args, Service\TransientHandler $transient ) {
 
 		$handle = new Service\OptionStorageHandler( $args[ 'option_name'] );
 
 		$items = $handle->get();
 
-		if( empty( $items ) || $transient->get() == FALSE ){
+		if( property_exists( $items, 'error') || $transient->get() == FALSE ){
 
 			new Service\Request( $args );
 
