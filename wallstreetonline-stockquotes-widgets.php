@@ -3,12 +3,11 @@
  * Plugin Name: wallstreet:online Stockquotes Widgets
  * Plugin URI:  http://www.wallstreet-online.de/widgets
  * Description: A plugin containing multiple widgets for stockquotes and charts
- * Version:     0.0.1
+ * Version:     2.0
  * Author:      Christian Rabe, René Reimann
  * Author URI:  http://www.rene-reimann.de
  * License:     GPLv3+
- * Text Domain: mhsibew
- * Domain Path: /languages
+ * Text Domain: wsoqw
  */
 namespace wallstreetonline\stockquotes;
 
@@ -43,7 +42,7 @@ function init() {
 			new Widgets\Register(
 				array(
 					'SearchBox',
-					'QuoteBox',
+					'QuotesBox',
 					#'Chartbox',
 					#'Quotebox_Citi',
 				)
