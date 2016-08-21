@@ -8,7 +8,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "wallstreetonline\\Test\\Helper\\": "tests/phpunit/Helper/"
+      "wallstreetonline\\stockquotes\\Test\\Helper\\": "tests/phpunit/Helper/"
     }
   },
   "require-dev": {
