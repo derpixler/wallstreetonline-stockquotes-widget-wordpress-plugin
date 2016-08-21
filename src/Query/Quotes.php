@@ -38,7 +38,7 @@ class Quotes extends Query{
 			$this->set_items( $this->arguments, $this->transient )
 		);
 
-
+		return $this->items;
 
 	}
 

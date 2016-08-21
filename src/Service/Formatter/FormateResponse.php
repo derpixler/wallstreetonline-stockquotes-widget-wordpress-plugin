@@ -19,9 +19,20 @@ class FormateResponse implements FormatterInterface {
 	 */
 	public function format( \stdClass $data ) {
 
-		print_r( $data );
-		die();
+		$formatted = FALSE;
 
-		return array_intersect_key( $data, array_flip( $properties ) );
+		foreach( $data->data as $item ){
+
+			$key                = $item->url;
+			$formatted->$key    = $item;
+
+		}
+
+		unset( $data->data );
+
+		$data->data = $formatted;
+
+		return $data;
+
 	}
 }
