@@ -19,23 +19,18 @@ class QuotesDataMarkup extends AbstractFormatter {
 	 */
 	public function format( $data ) {
 
-		foreach( $data->data as $key => $item ){
+		$index = $this->index;
+		$item = $this->item;
 
-			$item->tradePerf1dRel = str_replace(
-				array( 'red', 'green', '"><font class="ddd">', '</font></font>' ),
-				array( 'ddd', 'ddd', '">', '</font>'),
-			    $item->tradePerf1dRel
-			);
-
-			$item->linkedName = str_replace( '"   >', '">', $item->linkedName );
-
-			$this->data->$key = $item;
-
-		}
-
-		return $this->set_formatted_data(
-			$this->data
+		$item->tradePerf1dRel = str_replace(
+			array( 'red', 'green', '"><font class="ddd">', '</font></font>' ),
+			array( 'ddd', 'ddd', '">', '</font>'),
+		    $item->tradePerf1dRel
 		);
+
+		$item->linkedName = str_replace( '"   >', '">', $item->linkedName );
+
+		return $this->data->$index = $item;
 
 	}
 }

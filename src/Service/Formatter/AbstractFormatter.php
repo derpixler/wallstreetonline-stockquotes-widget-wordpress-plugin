@@ -16,6 +16,11 @@ abstract class AbstractFormatter {
 	 */
 	public $data;
 
+
+	public $index;
+
+	public $item;
+
 	/**
 	 * Returns a formatted representation of the given data.
 	 *
@@ -33,15 +38,27 @@ abstract class AbstractFormatter {
 
 		$this->data = new \stdClass();
 
+
+		if( is_array( $data ) ){
+
+			$this->index = $data[0];
+			$this->item = $data[1];
+
+		}
+
+
 		if( ! empty( $data ) ){
 			$this->format( $data );
 		}
+
+		unset( $this->index );
+		unset( $this->item );
 
 	}
 
 	public function set_formatted_data( $data ){
 
-		unset( $data->data );
+		unset( $data );
 
 		return $this->data;
 

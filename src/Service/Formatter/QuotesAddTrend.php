@@ -17,26 +17,15 @@ class QuotesAddTrend extends AbstractFormatter {
 	 *
 	 * @return array The formatted representation of the given data.
 	 */
-	public function format( $data ) {
+	public function format( $item ) {
 
-		foreach( $data->data as $key => $item ){
-
-			if( is_int( strpos( $item->tradePerf1dRel, '-' ) ) ){
-				$trend = 'negativ';
-			}else{
-				$trend = 'postitiv';
-			}
-
-			$item->trend = $trend;
-
-			$this->data->$key = $item;
-
+		if( is_int( strpos( $this->item->tradePerf1dRel, '-' ) ) ){
+			$trend = 'negativ';
+		}else{
+			$trend = 'postitiv';
 		}
 
-
-		return $this->set_formatted_data(
-			$this->data
-		);
+		$this->item->trend = $trend;
 
 	}
 }
