@@ -59,8 +59,8 @@ class QuotesBox extends \WP_Widget implements WidgetsInterface {
 	public function form( $instance ) {
 
 		$defaults = array(
-			'title' => __('Börse Kurse', 'wso-quotebox'),
-			'new_window' => __(true, 'wso-quotebox')
+			'title' => __('Marktübersicht', 'wso-widgets'),
+			'new_window' => __(true, 'wso-widgets')
 		);
 
 		$instance = wp_parse_args( (array) $instance, $defaults );

@@ -60,8 +60,7 @@ class OptionStorageHandler {
 			$this->delete();
 		}
 
-		$data = new \stdClass();
-		$data->error = 'no data';
+		$data = new \WP_Error( 'no Data', __( "No valid data", "wso-widgets" ) );
 
 		return $data;
 

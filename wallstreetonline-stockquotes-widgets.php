@@ -7,7 +7,7 @@
  * Author:      Christian Rabe, René Reimann
  * Author URI:  http://www.rene-reimann.de
  * License:     GPLv3+
- * Text Domain: wsoqw
+ * Text Domain: wso-widgets
  */
 namespace wallstreetonline\stockquotes;
 
@@ -42,20 +42,12 @@ function init() {
 			new Widgets\Register(
 				array(
 					'SearchBox',
-					'QuotesBox',
-					#'Chartbox',
-					#'Quotebox_Citi',
+					'QuotesBox'
 				)
 			);
 
 		}
 	);
-
-
-	#$Quotes = new \wallstreetonline\stockquotes\Query\Quotes();
-
-	#print_r( $Quotes->get_items() );
-
 
 }
 

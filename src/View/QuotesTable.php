@@ -32,7 +32,7 @@ echo $wso_widget->header;
 			<tr>
 				<td colspan="3" align="right" style="font-size: 0.8em">
 					<a href="http://www.wallstreet-online.de"> provide by
-						<img src="<?php echo $wso_widget->assets?>/wallstreetonline.png" style="height:0.8em"/>
+						<img src="<?php echo $wso_widget->assets?>/wallstreetonline.png" style="height:0.9em"/>
 					</a>
 				</td>
 			</tr>
