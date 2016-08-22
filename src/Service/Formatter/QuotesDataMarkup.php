@@ -15,7 +15,7 @@ class QuotesDataMarkup extends AbstractFormatter {
 	 *
 	 * @param array $data Data to be formatted.
 	 *
-	 * @return array The formatted representation of the given data.
+	 * @return void
 	 */
 	public function format( $data ) {
 
@@ -28,9 +28,9 @@ class QuotesDataMarkup extends AbstractFormatter {
 		    $item->tradePerf1dRel
 		);
 
-		$item->linkedName = str_replace( '"   >', '">', $item->linkedName );
+		$item->linkedName = str_replace( '"   >', ' - auf wallstreet:online" target="_blank">', $item->linkedName );
 
-		return $this->data->$index = $item;
+		$this->data->$index = $item;
 
 	}
 }

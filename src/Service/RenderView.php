@@ -2,8 +2,16 @@
 
 namespace wallstreetonline\stockquotes\Service;
 
+/**
+ * Class Render widget view load templates prepare objects etc.
+ *
+ * @package wallstreetonline\stockquotes\Service
+ */
 class RenderView{
 
+	/**
+	 * @param $widget_arguments
+	 */
 	public function __construct( $widget_arguments ){
 
 		$this->widget = $widget_arguments;
@@ -12,6 +20,11 @@ class RenderView{
 
 	}
 
+	/**
+	 * Provide the widget header
+	 *
+	 * @return string
+	 */
 	private function get_widget_header(){
 
 		return $this->widget[ 'before_widget' ] .
@@ -21,19 +34,33 @@ class RenderView{
 
 	}
 
+	/**
+	 * rovide the widget footer
+	 *
+	 * @return mixed
+	 */
 	private function get_widget_footer(){
 
 		return $this->widget[ 'after_widget' ];
 
 	}
 
+	/**
+	 * rovide the widget quotes
+	 *
+	 * @return mixed
+	 */
 	private function get_quotes(){
 
 		return $this->widget[ 'data' ]->data;
 
 	}
 
-
+	/**
+	 * Load widget template
+	 *
+	 * @param $tpl
+	 */
 	private function load_template( $tpl ){
 
 		global $wso_widget;

@@ -2,7 +2,11 @@
 
 namespace wallstreetonline\stockquotes\Widgets;
 
-
+/**
+ * Register widget
+ *
+ * @package wallstreetonline\stockquotes\Widgets
+ */
 class Register {
 
 	private $widgets;
@@ -15,6 +19,9 @@ class Register {
 
 	}
 
+	/**
+	 * Register widgets by namespace
+	 */
 	private function register(){
 
 		foreach( $this->widgets as $widget ){

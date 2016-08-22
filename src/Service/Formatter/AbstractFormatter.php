@@ -7,6 +7,11 @@ namespace wallstreetonline\stockquotes\Service\Formatter;
  *
  * @package Wildcat\SearchApi\Service\Formatter
  */
+/**
+ * Class AbstractFormatter
+ *
+ * @package wallstreetonline\stockquotes\Service\Formatter
+ */
 abstract class AbstractFormatter {
 
 	/**
@@ -16,9 +21,18 @@ abstract class AbstractFormatter {
 	 */
 	public $data;
 
-
+	/**
+	 * Index store
+	 *
+	 * @var
+	 */
 	public $index;
 
+	/**
+	 * Item store
+	 *
+	 * @var
+	 */
 	public $item;
 
 	/**
@@ -56,6 +70,13 @@ abstract class AbstractFormatter {
 
 	}
 
+	/**
+	 * Set formatted data
+	 *
+	 * @param $data
+	 *
+	 * @return array|\stdClass
+	 */
 	public function set_formatted_data( $data ){
 
 		unset( $data );

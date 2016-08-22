@@ -3,26 +3,11 @@
 namespace wallstreetonline\stockquotes\Service;
 
 /**
- * The request class authenticate with a token and
- * call data from the myhotelshop API
+ * The request class
  *
  * @package wallstreetonline\stockquotes\Service
  */
 class Request {
-
-	/**
-	 * contains the authentication token
-	 *
-	 * @var string
-	 */
-	private $secure_token = FALSE;
-
-	/**
-	 * simple the login data
-	 *
-	 * @var string | json
-	 */
-	private $login = '{"email": "company@myhotelshop.de", "password": "y41RGsFnpoCNylIp"}';
 
 	/**
 	 * The URL to the API
