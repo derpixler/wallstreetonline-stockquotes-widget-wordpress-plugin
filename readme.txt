@@ -1,24 +1,20 @@
 === wallstreetonline ===
-Contributors: wallstreetonline
-Tags: stocks,quotes,realtime
-Requires at least: n/a
-Tested up to: n/a
-Stable tag: trunk
+Contributors: derpixler, wallstreetonline
+Tags: stocks, quotes, realtime, quotesearch
+Requires at least: 4.0
+Tested up to: 4.5.2
+Stable tag: 2.0
+
 
 Widgets zur Darstellung von Börseninformationen
 
 == Description ==
 
-Marktüberblick in Echtzeit: Mit dem Plugin werden die wichtigsten Börsen-
-und Aktienindikatoren in Realtime angezeigt. Dazu gehören DAX, Dow
-Jones/Dowjones, Nasdaq, Nikkei, S&P50, Eurostoxx, Ölkurs, Silberkurs und
-Goldkurs.
+Marktüberblick in Echtzeit: Mit dem Plugin werden die wichtigsten Börsen- und Aktienindikatoren in Realtime angezeigt. Dazu gehören DAX, Dow Jones/Dowjones, Nasdaq, Nikkei, S&P50, Eurostoxx, Ölkurs, Silberkurs und Goldkurs.
 
-Einfache Installation: Das Plugin passt sich automatisch dem Layout auf der
-Seite an. Die Überschrift ist individuell anpassbar.
+Einfache Installation: Das Plugin passt sich automatisch dem Layout auf der Seite an. Die Überschrift ist individuell anpassbar.
 
-Feedback erwünscht: Sendet eure Verbesserungsvorschläge sehr gerne an
-feedback@wallstreet-online.de.
+[**Checkout our GitHub Repository**](https://github.com/derpixler/wallstreetonline-stockquotes-wordpress-widget)
 
 == Installation ==
 
