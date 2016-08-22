@@ -25,12 +25,12 @@ class Quotes extends Query{
 			];
 
 		$this->transient = new Service\TransientHandler( $this->arguments[ 'option_name'] );
-		$this->formatter = new Service\Formatter\FormateResponse();
+		$this->formatter = new Service\Formatter\QuotesFormatter();
 
 	}
 
 	/**
-	 * Set the IBEs
+	 * get the quotes
 	 */
 	public function get_items() {
 

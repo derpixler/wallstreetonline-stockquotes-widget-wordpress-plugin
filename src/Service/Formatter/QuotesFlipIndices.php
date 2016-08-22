@@ -2,12 +2,13 @@
 
 namespace wallstreetonline\stockquotes\Service\Formatter;
 
+
 /**
  * Data formatter implementation for formatted data.
  *
  * @package wallstreetonline\stockquotes\Service
  */
-class FormateResponse implements FormatterInterface {
+class QuotesFlipIndices extends AbstractFormatter {
 
 	/**
 	 * Returns a formatted representation of the given data.
@@ -16,22 +17,19 @@ class FormateResponse implements FormatterInterface {
 	 *
 	 * @return array The formatted representation of the given data.
 	 */
-	public function format( \stdClass $data ) {
-
-		$formatted = FALSE;
+	public function format( $data ) {
 
 		foreach( $data->data as $item ){
 
-			$key                = $item->url;
-			$formatted->$key    = $item;
+			$key = $item->url;
+			$this->data->$key = $item;
 
 		}
 
-		unset( $data->data );
-
-		$data->data = $formatted;
-
-		return $data;
+		return $this->set_formatted_data(
+			$this->data
+		);
 
 	}
+
 }

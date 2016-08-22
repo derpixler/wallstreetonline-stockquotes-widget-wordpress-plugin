@@ -7,7 +7,14 @@ namespace wallstreetonline\stockquotes\Service\Formatter;
  *
  * @package Wildcat\SearchApi\Service\Formatter
  */
-interface FormatterInterface {
+abstract class AbstractFormatter {
+
+	/**
+	 * Quotes data object
+	 *
+	 * @var array
+	 */
+	public $data;
 
 	/**
 	 * Returns a formatted representation of the given data.
@@ -17,5 +24,27 @@ interface FormatterInterface {
 	 *
 	 * @return array The formatted representation of the given data.
 	 */
-	public function format( \stdClass $data );
+	public abstract function format( $data );
+
+	/**
+	 * @param $data
+	 */
+	public function __construct( $data = null ){
+
+		$this->data = new \stdClass();
+
+		if( ! empty( $data ) ){
+			$this->format( $data );
+		}
+
+	}
+
+	public function set_formatted_data( $data ){
+
+		unset( $data->data );
+
+		return $this->data;
+
+	}
+
 }
