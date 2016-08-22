@@ -2,8 +2,8 @@
 
 namespace wallstreetonline\stockquotes\Widgets;
 
-use wallstreetonline\stockquotes\Service;
 use wallstreetonline\stockquotes\Query;
+use wallstreetonline\stockquotes\Service;
 
 /**
  * Class QuotesBox Widget
@@ -40,14 +40,12 @@ class QuotesBox extends \WP_Widget implements WidgetsInterface {
 
 		$quotes = new Query\Quotes();
 
-		$args[ 'data' ] = $quotes->get_items();
+		$args[ 'data' ]     = $quotes->get_items();
+		$args[ 'template']  = 'QuotesTable';
+		$args[ 'global' ]   = 'wso_widget_QuotesTable';
+		$args[ 'instance' ] = $instance;
 
-		new Service\RenderView(
-			array(
-				$args,
-				$instance
-			)
-		);
+			new Service\RenderView( $args, $instance );
 
 	}
 

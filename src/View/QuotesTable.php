@@ -1,14 +1,13 @@
 <?php  # -*- coding: utf-8 -*-
 
-global $wso_quotes;
+global $wso_widget;
 
-echo $wso_quotes[0]['before_widget'];
-echo $wso_quotes[0]['before_title'] . $wso_quotes[1]['title'] . $wso_quotes[0]['after_title'];
+echo $wso_widget->header;
 ?>
 
 <ul>
 
-<?php foreach( $wso_quotes[0]['data']->data as $quotes ): ?>
+<?php foreach( $wso_widget->quotes as $quotes ): ?>
 
 	<li><?=$quotes->linkedName?> ... <?=$quotes->tradePerf1dRel?></li>
 
@@ -16,4 +15,4 @@ echo $wso_quotes[0]['before_title'] . $wso_quotes[1]['title'] . $wso_quotes[0]['
 
 </ul>
 
-<?php echo $wso_quotes[0]['after_widget'];
+<?php echo $wso_widget->footer;
