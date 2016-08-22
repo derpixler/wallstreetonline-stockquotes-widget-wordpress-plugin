@@ -42,7 +42,7 @@ class RenderView{
 		$wso_widget->header = $this->get_widget_header();
 		$wso_widget->footer = $this->get_widget_footer();
 		$wso_widget->quotes = $this->get_quotes();
-
+		$wso_widget->assets = str_replace( '/src/' . basename( __DIR__ ), '', plugins_url( 'assets/img', __FILE__ ) );
 
 		if ( $overridden_template = locate_template( 'widgets/wallstreetonline-stockquotes-wordpress-widget/' . $tpl . '.php' ) ) {
 			load_template( $overridden_template );
