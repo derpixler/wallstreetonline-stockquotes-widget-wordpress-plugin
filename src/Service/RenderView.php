@@ -4,13 +4,17 @@ namespace wallstreetonline\stockquotes\Service;
 
 class RenderView{
 
-	private $item;
-
 	public function __construct( array $arguments ){
 
-		$this->item = $arguments;
+		global $wso_quotes;
 
-		print_r( $this );
+		$wso_quotes = $arguments;
+
+		if ( $overridden_template = locate_template( 'widgets/wallstreetonline-stockquotes-wordpress-widget/QuotesTable.php' ) ) {
+			load_template( $overridden_template );
+		} else {
+			load_template( dirname( __FILE__ ) . '/../view/QuotesTable.php' );
+		}
 
 	}
 
