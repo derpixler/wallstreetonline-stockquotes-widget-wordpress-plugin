@@ -29,7 +29,7 @@ class TransientHandler implements TransientInterface {
 	 *
 	 * @var int
 	 */
-	private $expire = 1440;
+	private $expire = 60;
 
 	/**
 	 * @param $option_name
