@@ -7,7 +7,7 @@ namespace wallstreetonline\stockquotes\Widgets;
  *
  * @package wallstreetonline\stockquotes\Widgets
  */
-class SearchBox extends \WP_Widget {
+class SearchBox extends \WP_Widget implements WidgetsInterface {
 
 	/**
 	 * Sets up the widgets name etc

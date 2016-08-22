@@ -10,7 +10,7 @@ use wallstreetonline\stockquotes\Query;
  *
  * @package wallstreetonline\stockquotes\Widgets
  */
-class QuotesBox extends \WP_Widget {
+class QuotesBox extends \WP_Widget implements WidgetsInterface {
 
 	/**
 	 * Sets up the widgets name etc
