@@ -11,3 +11,4 @@ composer.json       export-ignore
 phpunit.xml.dist    export-ignore
 .travis.yml         export-ignore
 wporg-assets        export-ignore
+tests               export-ignore
