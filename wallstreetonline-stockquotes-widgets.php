@@ -39,7 +39,7 @@ function init() {
 
 	add_action( 'widgets_init', function(){
 
-			new Widgets\Register(
+			new Service\RegisterWidgets(
 				array(
 					'SearchBox',
 					'QuotesBox'

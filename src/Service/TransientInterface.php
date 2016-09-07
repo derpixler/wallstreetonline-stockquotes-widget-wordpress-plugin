@@ -4,7 +4,7 @@ namespace wallstreetonline\stockquotes\Service;
 
 /**
  * Handel transients interface
- * set, create and delete transietn
+ * set, create and delete transient
  *
  * @package wallstreetonline\stockquotes\\Service
  */

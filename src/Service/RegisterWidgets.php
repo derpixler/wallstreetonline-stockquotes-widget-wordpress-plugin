@@ -1,13 +1,15 @@
 <?php # -*- coding: utf-8 -*-
 
-namespace wallstreetonline\stockquotes\Widgets;
+namespace wallstreetonline\stockquotes\Service;
+
+use wallstreetonline\stockquotes\Widegts;
 
 /**
  * Register widget
  *
  * @package wallstreetonline\stockquotes\Widgets
  */
-class Register {
+class RegisterWidgets {
 
 	private $widgets;
 
@@ -26,7 +28,7 @@ class Register {
 
 		foreach( $this->widgets as $widget ){
 
-			$widget_class = __NAMESPACE__ . "\\" . $widget;
+			$widget_class = str_replace( 'Service', 'Widgets', __NAMESPACE__ ). "\\" . $widget;
 
 			if( class_exists( $widget_class ) ) {
 				register_widget( $widget_class );

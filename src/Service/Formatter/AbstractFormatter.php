@@ -3,12 +3,7 @@
 namespace wallstreetonline\stockquotes\Service\Formatter;
 
 /**
- * Interface for all formatter implementations.
- *
- * @package Wildcat\SearchApi\Service\Formatter
- */
-/**
- * Class AbstractFormatter
+ * Abstract class for all formatter implementations.
  *
  * @package wallstreetonline\stockquotes\Service\Formatter
  */

@@ -45,7 +45,7 @@ class QuotesBox extends \WP_Widget implements WidgetsInterface {
 		$args[ 'global' ]   = 'wso_widget_QuotesTable';
 		$args[ 'instance' ] = $instance;
 
-			new Service\RenderView( $args, $instance );
+		new Service\RenderView( $args, $instance );
 
 	}
 
