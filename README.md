@@ -8,6 +8,9 @@ Marktüberblick in Echtzeit: Mit dem Plugin werden die wichtigsten Börsen- und 
 
 Einfache Installation: Das Plugin passt sich automatisch dem Layout auf der Seite an. Die Überschrift ist individuell anpassbar.
 
+[Download this Plugins](https://github.com/derpixler/wallstreetonline-stockquotes-wordpress-widget/archive/2.0.zip)
+
+![wallstreet:online Widgets](https://cloud.githubusercontent.com/assets/809219/17864931/69914cea-68a0-11e6-9832-96469887870f.png)
 
 ##Requirements:
 PHP 5.4. +
